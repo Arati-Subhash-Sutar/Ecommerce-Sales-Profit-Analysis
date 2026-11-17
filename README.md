@@ -1,4 +1,4 @@
-# End-to-End E-Commerce Sales, Profitability & Logistics Analysis
+# End-to-End Ecommerce Sales, Profitability & Logistics Analysis
 
 ## Project Overview
 This project analyzes **50,000+ e-commerce orders** across India to identify profit margin leakage, evaluate promotional discount effectiveness, and uncover operational bottlenecks causing high return and cancellation rates. 
