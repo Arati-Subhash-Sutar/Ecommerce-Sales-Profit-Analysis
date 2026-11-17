@@ -1,6 +1,6 @@
 # Business Requirement Document (BRD)
 
-**Project Name:** Ecommerce-Sales-Profit-Optimization  
+**Project Name:** Ecommerce-Sales-Profit-Analysis
 **Author:** Arati Sutar  
 **Date:** November 2026  
 **Stakeholders:** Retail Operations Lead, Pricing Team, Logistics Manager  
