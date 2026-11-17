@@ -1,0 +1,129 @@
+======================================================================
+PROBLEM 1: Overall Net Revenue, Total Cost, and Net Profit
+======================================================================
+ delivered_orders  net_revenue  total_cost   net_profit
+            41104 975221926.76 738298547.5 236923379.26
+
+======================================================================
+PROBLEM 2: Category & Sub-Category Profit Margin Ranking
+======================================================================
+        category  sub_category      revenue      profit  profit_margin_pct
+Sports & Fitness    Activewear 111768903.59 29414843.77              26.32
+  Home & Kitchen         Decor  78055938.37 23390053.36              29.97
+Sports & Fitness          Yoga  83168925.13 22112258.84              26.59
+Sports & Fitness       Cycling  72813946.18 18663631.05              25.63
+Sports & Fitness      Gym Gear  74668008.44 16052697.97              21.50
+  Home & Kitchen    Appliances  67755445.61 15414320.76              22.75
+     Electronics   Smartphones  62430397.46 13930781.50              22.31
+ Beauty & Health      Skincare  44545753.58 13488451.91              30.28
+         Fashion   Men Apparel  55982384.97 11460020.79              20.47
+  Home & Kitchen     Furniture  36943687.53 10046636.00              27.19
+     Electronics   Accessories  41171635.28  9303799.42              22.60
+         Fashion       Watches  28946479.42  7813114.73              26.99
+     Electronics       Laptops  25989567.38  7376076.31              28.38
+     Electronics         Audio  36414725.12  7297327.51              20.04
+  Home & Kitchen      Cookware  37209176.63  6698767.83              18.00
+ Beauty & Health   Supplements  27669286.71  6178335.05              22.33
+ Beauty & Health     Fragrance  32424927.02  5784858.09              17.84
+         Fashion Women Apparel  21430978.35  5157522.33              24.07
+ Beauty & Health      Haircare  24250866.41  4312904.60              17.78
+         Fashion      Footwear  11580893.58  3026977.42              26.14
+
+======================================================================
+PROBLEM 3: Discount Erosion Analysis (Loss-Making Tiers)
+======================================================================
+ discount_pct  total_orders  avg_profit_per_order  loss_making_orders
+            0         10287               8419.01                 0.0
+            5          8189               7159.34                 0.0
+           10          8171               5745.46                 0.0
+           15          6226               4475.05                 0.0
+           20          4927               3113.14                 0.0
+           30          3304                466.97              1433.0
+
+======================================================================
+PROBLEM 4: Regional Revenue Contribution % (Window Function)
+======================================================================
+region  orders  regional_revenue  revenue_share_pct
+  West   14359      339774861.13              34.84
+ South   12355      294805317.60              30.23
+ North    8604      201902555.54              20.70
+  East    5786      138739192.49              14.23
+
+======================================================================
+PROBLEM 5: Top 3 Most Profitable Cities per Region (CTE + DENSE_RANK)
+======================================================================
+region      city  total_profit  city_rank
+ South    Mumbai   11546071.34          1
+ South Bengaluru   10623640.17          2
+ South     Delhi   10530710.70          3
+  East Hyderabad    6116652.42          1
+  East Bengaluru    5926816.90          2
+  East   Chennai    5014312.31          3
+ North Bengaluru    8154683.15          1
+ North      Pune    7146907.85          2
+ North    Mumbai    7069469.16          3
+  West   Kolkata   12224381.31          1
+  West    Mumbai   11988537.98          2
+  West     Delhi   11824782.36          3
+
+======================================================================
+PROBLEM 6: Month-over-Month (MoM) Revenue Growth Rate (LAG)
+======================================================================
+order_year_month  current_month_rev  prev_month_rev  mom_growth_pct
+         2025-01        46602549.26             NaN             NaN
+         2025-02        40811435.65     46602549.26          -12.43
+         2025-03        47437913.17     40811435.65           16.24
+         2025-04        42907128.41     47437913.17           -9.55
+         2025-05        46287127.38     42907128.41            7.88
+         2025-06        44121699.71     46287127.38           -4.68
+         2025-07        45841515.84     44121699.71            3.90
+         2025-08        43592409.44     45841515.84           -4.91
+         2025-09        42807565.84     43592409.44           -1.80
+         2025-10        44303959.62     42807565.84            3.50
+         2025-11        45187928.65     44303959.62            2.00
+         2025-12        45031642.99     45187928.65           -0.35
+         2026-01        42490673.46     45031642.99           -5.64
+         2026-02        40769786.99     42490673.46           -4.05
+         2026-03        45293391.18     40769786.99           11.10
+         2026-04        45285918.12     45293391.18           -0.02
+         2026-05        46422684.41     45285918.12            2.51
+         2026-06        43718073.46     46422684.41           -5.83
+         2026-07        42627492.43     43718073.46           -2.49
+         2026-08        45383026.00     42627492.43            6.46
+         2026-09        44619530.44     45383026.00           -1.68
+         2026-10        43678474.28     44619530.44           -2.11
+
+======================================================================
+PROBLEM 7: Customer Segment Value & Average Order Value (AOV)
+======================================================================
+customer_segment  active_customers  total_orders  avg_order_value
+       Corporate              1219         10015         23844.44
+        Consumer              2575         21166         23738.88
+    Prime Member              1202          9923         23577.83
+
+======================================================================
+PROBLEM 8: Shipping Delay Impact on Return & Cancellation Rates
+======================================================================
+     delivery_speed  total_orders  return_rate_pct  cancellation_rate_pct
+  Delayed (7+ Days)         16611            11.14                   6.71
+    Fast (1-3 Days)         16588            10.89                   6.91
+Standard (4-6 Days)         16801            10.69                   7.03
+
+======================================================================
+PROBLEM 9: Payment Mode Risk Analysis (COD vs Digital)
+======================================================================
+    payment_mode  total_orders  failed_order_rate_pct
+      Debit Card          7396                  18.43
+             UPI         22110                  17.84
+     Credit Card         12408                  17.80
+Cash on Delivery          7489                  17.09
+         Unknown           597                  16.58
+
+======================================================================
+PROBLEM 10: RFM-Style Customer Tiering (Champions vs Occasional)
+======================================================================
+   customer_tier  customer_count  avg_lifetime_spend
+    VIP Champion             623           315370.77
+  Loyal Customer            3542           196020.99
+Occasional Buyer             831           101612.03
+
