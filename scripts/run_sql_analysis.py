@@ -1,12 +1,12 @@
 import duckdb
 
-# 1. Connect to DuckDB & load your 3 clean CSV tables
+# 1. Connecting to duckdb and loading all .csv files
 con = duckdb.connect()
 con.execute("CREATE TABLE customers AS SELECT * FROM read_csv_auto('clean_customers.csv');")
 con.execute("CREATE TABLE products AS SELECT * FROM read_csv_auto('clean_products.csv');")
 con.execute("CREATE TABLE orders AS SELECT * FROM read_csv_auto('clean_orders.csv');")
 
-# 2. Dictionary containing all 10 Solved Business Problems
+# 2. Dictionalry with all solved problems
 queries = {
     "PROBLEM 1: Overall Net Revenue, Total Cost, and Net Profit": """
         SELECT 
@@ -168,7 +168,7 @@ queries = {
     """
 }
 
-# 3. Print all 10 results to terminal AND save them to a text file
+# 3. Printing and saving all results
 with open("sql_query_results.txt", "w") as f:
     for title, sql in queries.items():
         df_result = con.execute(sql).df()
