@@ -42,7 +42,7 @@ Ecommerce-Sales-Profit-Analysis/
 ├── sql_outputs/
 │   └── sql_query_results.txt       # Formatted output tables for all 10 SQL queries
 └── powerbi/
-    ├── ecommerce_dashboard.pbix    # Interactive Power BI report file
+    ├── Ecommerce Sales and Profit Analysis.pbix    # Interactive Power BI report file
     ├── page1_executive_overview.png
     ├── page2_discount_analysis.png
     └── page3_logistics_customers.png
